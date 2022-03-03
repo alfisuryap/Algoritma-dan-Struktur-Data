@@ -6,11 +6,11 @@ public class BarangMain {
     public static void main(String[] args) {
         Barang l1 = new Barang();
         Scanner zh = new Scanner(System.in);
-        System.out.print("Masukkan nama barang : ");
+        System.out.print("Masukkan nama barang         : ");
         l1.nama = zh.nextLine();
         System.out.print("Masukkan harga satuan barang : ");
         l1.hargaSatuan = zh.nextInt();
-        System.out.print("Masukkan jumlah barang : ");
+        System.out.print("Masukkan jumlah barang       : ");
         l1.jumlah = zh.nextInt();
         System.out.println("====================================");
         int totalHarga = l1.hitungHargaTotal(l1.hargaSatuan, l1.jumlah);

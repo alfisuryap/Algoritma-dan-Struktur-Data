@@ -11,7 +11,7 @@ public class BarangMain {
         b1.kurangiStok(3);
         b1.tampilBarang();
         int hargaTotal = b1.hitungHargaTotal(4);
-        System.out.println("Harga Satuan = " + hargaTotal);
+        System.out.println("Harga 4 buah = " + hargaTotal);
         Barang b2 = new Barang("Logitech", "Wireless Mouse", 25, 150000);
         b2.tampilBarang();
     }

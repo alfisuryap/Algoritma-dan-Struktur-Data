@@ -8,6 +8,13 @@
             "type": "java",
             "name": "Launch BarangMain",
             "request": "launch",
+            "mainClass": "Jobsheet_2.Source_Code.Percobaan.BarangMain",
+            "projectName": "Algoritma-dan-Struktur-Data_b7f24b95"
+        },
+        {
+            "type": "java",
+            "name": "Launch BarangMain",
+            "request": "launch",
             "mainClass": "Jobsheet_2.Source_Code.Tugas.BarangMain",
             "projectName": "Algoritma-dan-Struktur-Data_b7f24b95"
         },
