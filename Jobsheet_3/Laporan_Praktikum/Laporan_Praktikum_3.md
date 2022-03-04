@@ -1,0 +1,9 @@
+Nama    : Alfi Surya Pratama
+
+Kelas   : TI-1F
+
+NIM     : 2141720075
+
+# **PRAKTIKUM ALGORITMA DAN STRUKTUR DATA**
+## **JOBSHEET 3**
+## **ARRAY OF OBJECT**
