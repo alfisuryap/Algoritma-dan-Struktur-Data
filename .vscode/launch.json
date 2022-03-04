@@ -6,6 +6,20 @@
     "configurations": [
         {
             "type": "java",
+            "name": "Launch bangunRuang",
+            "request": "launch",
+            "mainClass": "Jobsheet_3.Source_Code.Tugas.bangunRuang",
+            "projectName": "Algoritma-dan-Struktur-Data_b7f24b95"
+        },
+        {
+            "type": "java",
+            "name": "Launch PersegiPanjang",
+            "request": "launch",
+            "mainClass": "Jobsheet_3.Source_Code.Percobaan.PersegiPanjang",
+            "projectName": "Algoritma-dan-Struktur-Data_b7f24b95"
+        },
+        {
+            "type": "java",
             "name": "Launch BarangMain",
             "request": "launch",
             "mainClass": "Jobsheet_2.Source_Code.Percobaan.BarangMain",

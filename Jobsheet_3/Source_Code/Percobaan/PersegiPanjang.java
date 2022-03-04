@@ -1,17 +1,3 @@
-Nama    : Alfi Surya Pratama
-
-Kelas   : TI-1F
-
-NIM     : 2141720075
-
-# **PRAKTIKUM ALGORITMA DAN STRUKTUR DATA**
-## **JOBSHEET 3**
-## **ARRAY OF OBJECT**
-
-### **3.2 Membuat Array dari Object, Mengisi dan Menampilkan**
-
-### *3.2.1 Langkah-langkah Percobaan*
-~~~java
 package Jobsheet_3.Source_Code.Percobaan;
 
 public class PersegiPanjang {
@@ -40,25 +26,3 @@ public class PersegiPanjang {
     }
     
 }
-~~~
-
-### *3.2.2 Verifikasi Hasil Percobaan*
-
-<img src = "Screenshot (481).png">
-
-### *3.2.1 Pertanyaan*
-1. Berdasarkan uji coba 3.2, apakah class yang akan dibuat array of object harus selalu memiliki
-atribut dan sekaligus method?Jelaskan!
-
-2. Apakah class PersegiPanjang memiliki konstruktor?Jika tidak, kenapa dilakukan pemanggilan
-konstruktur pada baris program berikut :
-
-3. Apa yang dimaksud dengan kode berikut ini:
-
-4. Apa yang dimaksud dengan kode berikut ini:
-
-5. Mengapa class main dan juga class PersegiPanjang dipisahkan pada uji coba 3.2?
-
-### **3.3 Menerima Input Isian Array Menggunakan Looping**
-
-### *3.3.1 Langkah-langkah Percobaan*
