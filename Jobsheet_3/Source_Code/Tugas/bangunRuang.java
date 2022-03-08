@@ -45,6 +45,7 @@ public class bangunRuang {
             ti = sc.nextInt();
             System.out.print("Masukkan tinggi prisma " + (i + 1) + ": ");
             tp = sc.nextInt();
+            System.out.println();
             prArray[i] = new prisma(a, ti, tp);
         }
         for(int i = 0; i < prArray.length; i++){
@@ -69,6 +70,7 @@ public class bangunRuang {
             r = sc.nextInt();
             System.out.print("Masukkan tinggi " + (i +1) + ": ");
             tt = sc.nextInt();
+            System.out.println();
             tbArray[i] = new tabung(r, tt);
         }
         for(int i = 0; i < prArray.length; i++){
