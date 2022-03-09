@@ -46,27 +46,127 @@ public class PersegiPanjang {
 
 <img src = "Screenshot (481).png">
 
-### *3.2.1 Pertanyaan*
+### *3.2.3 Pertanyaan*
 1. Berdasarkan uji coba 3.2, apakah class yang akan dibuat array of object harus selalu memiliki
 atribut dan sekaligus method?Jelaskan!
 
+*Class yang dibuat array of object harus memiliki atribut dan tidak harus selalu memiliki method, karena atribut merupakan variable yang terletak di dalam class, sedangkan untuk method biasanya digunakan untuk menghitung rumus*
+
 2. Apakah class PersegiPanjang memiliki konstruktor?Jika tidak, kenapa dilakukan pemanggilan
 konstruktur pada baris program berikut :
+~~~java
+ppArray[1] = new PersegiPanjang();
+~~~
+
+*Class persegiPanjang tidak memiliki konstruktor, namum pemanggilan konstruktor dalam kode program tersebut tetap dilakukan untuk menghindar Error NullPointerException*
 
 3. Apa yang dimaksud dengan kode berikut ini:
+~~~java
+PersegiPanjang[] ppArray = new PersegiPanjang[3];
+~~~
+
+*Kode program tersebut merupakan deklarasi dan instansiasi array yang dituliskan pada class main*
 
 4. Apa yang dimaksud dengan kode berikut ini:
+~~~java
+ppArray[1] = new PersegiPanjang();
+ppArray[1] .panjang = 80;
+ppArray[1] .lebar = 40;
+~~~
+
+*KOde program tersebut merupakan object yang dibuat untuk mengisi array persegiPanjang yang telah dideklarasi dan diinstansiasikan sebelumnya*
 
 5. Mengapa class main dan juga class PersegiPanjang dipisahkan pada uji coba 3.2?
+
+*Class main dan class persegiPanjang dipisahkan karena dalam membuat array of object akan diperlukan class yang terpisah dengan class main sebagai objectnya*
 
 ### **3.3 Menerima Input Isian Array Menggunakan Looping**
 
 ### *3.3.1 Langkah-langkah Percobaan*
 
+### *3.3.2 Verifikasi Hasil Percobaan*
+
+### *3.3.3 Pertanyaan*
+
 ### **3.4 Operasi Matematika Atribut Object Array**
+
+### *3.4.1 Langkah-langkah Percobaan*
+~~~java
+package Jobsheet_3.Source_Code.Percobaan;
+
+public class Balok {
+    public int panjang;
+    public int lebar;
+    public int tinggi;
+
+    public Balok(int p, int l, int t){
+        panjang = p;
+        lebar = l;
+        tinggi = t;
+    }
+
+    public int hitungVolume(){
+        return panjang * lebar * tinggi;
+    }
+}
+~~~
+
+~~~java
+package Jobsheet_3.Source_Code.Percobaan;
+
+public class ArrayBalok {
+    public static void main(String[] args){
+        Balok[] blArray = new Balok[3];
+
+        blArray[0] = new Balok (100, 30, 12);
+        blArray[1] = new Balok (120, 40, 15);
+        blArray[2] = new Balok (210, 50, 25);
+
+        for(int i = 0; i < 3; i++){
+            System.out.println("Volume balok ke " + i + ": " + blArray[i].hitungVolume());
+        }
+    }
+}
+~~~
+
+### *3.4.2 Verifikasi Hasil Percobaan*
+
+<img src = "Screenshot (487).png">
+
+### *3.4.3 Pertanyaan*
+1. Dapatkah konstruktor berjumlah lebih dalam satu kelas? Jelaskan dengan contoh!
+
+*Konstruktor hanya dapat berjumlah 1 dalam satu class, karena setiap konstruktor harus mempunyai method yang sama dengan class yang digunakan, sehingga apabila ingin membuat konstruktor lagi harus membuat class baru*
+
+2. Jika diketahui terdapat class Segitiga seperti berikut ini:
+~~~java
+public class Segitiga{
+    public int alas;
+    public int tinggi;
+}
+~~~
+Tambahkan konstruktor pada class Segitiga tersebut yang berisi parameter int a, int t yang masing-masing digunakan untuk mengisikan atribut alas dan tinggi.
+
+3. Tambahkan method hitungLuas() dan hitungKeliling() pada class Segitiga
+tersebut.
+
+4. Pada fungsi main, buat array Segitiga sgArray yang berisi 4 elemen, isikan masing-masing
+atributnya sebagai berikut:
+    sgArray ke-0 alas: 10, tinggi: 4
+
+    sgArray ke-1 alas: 20, tinggi: 10
+
+    sgArray ke-2 alas: 15, tinggi: 6
+
+    sgArray ke-3 alas: 25, tinggi: 10
+
+5. Kemudian menggunakan looping, cetak luas dan keliling dengan cara memanggil method
+hitungLuas() dan hitungKeliling().
 
 ### **3.5 Latihan Praktikum**
 **Nomor 1**
+
+*CLASS*
 
 *Balok*
 ~~~java
@@ -135,6 +235,8 @@ public class tabung {
     }
 }
 ~~~
+
+*MAIN*
 
 ~~~java
 package Jobsheet_3.Source_Code.Tugas;
@@ -224,4 +326,129 @@ public class bangunRuang {
 ~~~
 *Output*
 
+<img src = "Screenshot (490).png">
+<img src = "Screenshot (491).png">
+<img src = "Screenshot (493).png">
 
+**Nomor 2**
+
+*CLASS*
+~~~java
+package Jobsheet_3.Source_Code.Tugas;
+
+public class tanah {
+    public int panjang, lebar;
+
+    public int luasTanah() {
+        return panjang * lebar;
+    }
+
+    public int tanahTerluas(int luas[]) {
+        int terluas = 0;
+        int y = 0;
+        for (int i = 0; i < luas.length; i++)
+            if (luas[i] > terluas) {
+                terluas = luas[i];
+                y = i;
+            }
+        return y;
+    }
+}
+~~~
+
+*MAIN*
+~~~java
+package Jobsheet_3.Source_Code.Tugas;
+
+import java.util.Scanner;
+
+public class mainTanah {
+    private static int i;
+
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        System.out.print("Masukkan jumlah tanah : ");
+        int n = sc.nextInt();
+        tanah[] tnArray = new tanah[n];
+        System.out.println();
+        for (int i = 0; i < n; i++) {
+            tnArray[i] = new tanah();
+            System.out.println("Tanah " + (i + 1));
+            System.out.print("Panjang : ");
+            tnArray[i].panjang = sc.nextInt();
+            System.out.print("Lebar : ");
+            tnArray[i].lebar = sc.nextInt();
+        }
+        System.out.println();
+        for (int i = 0; i < n; i++) {
+            System.out.println("Luas Tanah " + (i + 1) + ": " + tnArray[i].luasTanah());
+        }
+        System.out.println();
+        int y = 0;
+        int luas[] = new int[n];
+        for (int i = 0; i < n; i++) {
+            luas[i] = tnArray[i].luasTanah();
+        }
+        y = tnArray[0].tanahTerluas(luas);
+        System.out.println("Tanah terluas : Tanah " + (y + 1));
+    }
+}
+~~~
+
+*Output*
+
+<img src = "Screenshot (488).png">
+
+**Nomor 3**
+
+*CLASS*
+~~~java
+package Jobsheet_3.Source_Code.Tugas;
+
+public class mahasiswa {
+    public String nama;
+    public int nim;
+    public char jenisKelamin;
+    public double ipk;
+}
+~~~
+
+*MAIN*
+~~~java
+package Jobsheet_3.Source_Code.Tugas;
+
+import java.util.Scanner;
+
+public class mainMahasiswa {
+    public static void main(String[] args){
+        Scanner input = new Scanner(System.in);
+        mahasiswa[] mhs = new mahasiswa[10];
+
+        for(int i = 0; i < 3; i++){
+            System.out.println("Masukkan data Mahasiswa ke-" + (i+1));
+            mhs[i] = new mahasiswa();
+            System.out.print("Masukkan Nama         : ");
+            mhs[i].nama = input.next();
+            System.out.print("Masukkan NIM          : ");
+            mhs[i].nim = input.nextInt();
+            System.out.print("Masukkan Jenis Kelamin: ");
+            mhs[i].jenisKelamin = input.next().charAt(0);
+            System.out.print("Masukkan IPK          : ");
+            mhs[i].ipk = input.nextDouble();
+            System.out.println();
+        }
+        System.out.println();
+        for(int i = 0; i < 3; i++){
+            System.out.println("Data Mahasiswa ke-" + (i+1));
+            System.out.println("Nama         : " + mhs[i].nama);
+            System.out.println("NIM          : " + mhs[i].nim);
+            System.out.println("Jenis Kelamin: " + mhs[i].jenisKelamin);
+            System.out.println("IPK          : " + mhs[i].ipk);
+        }
+    }
+}
+~~~
+
+*Output*
+
+<img src = "Screenshot (489).png">

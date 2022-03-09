@@ -39,9 +39,9 @@ public class bangunRuang {
         prisma[] prArray = new prisma[pr];
         System.out.println("--------------------------");
         for(int i = 0; i < prArray.length; i++){
-            System.out.print("Masukkan alas " + (i + 1) + ": ");
+            System.out.print("Masukkan alas " + (i + 1) + "         : ");
             a = sc.nextInt();
-            System.out.print("Masukkan tinggi " + (i + 1) + ": ");
+            System.out.print("Masukkan tinggi " + (i + 1) + "       : ");
             ti = sc.nextInt();
             System.out.print("Masukkan tinggi prisma " + (i + 1) + ": ");
             tp = sc.nextInt();
@@ -68,7 +68,7 @@ public class bangunRuang {
         for(int i = 0; i < prArray.length; i++){
             System.out.print("Masukkan jari-jari " + (i + 1) + ": ");
             r = sc.nextInt();
-            System.out.print("Masukkan tinggi " + (i +1) + ": ");
+            System.out.print("Masukkan tinggi " + (i +1) + "   : ");
             tt = sc.nextInt();
             System.out.println();
             tbArray[i] = new tabung(r, tt);

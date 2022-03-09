@@ -6,6 +6,27 @@
     "configurations": [
         {
             "type": "java",
+            "name": "Launch mainMahasiswa",
+            "request": "launch",
+            "mainClass": "Jobsheet_3.Source_Code.Tugas.mainMahasiswa",
+            "projectName": "Algoritma-dan-Struktur-Data_b7f24b95"
+        },
+        {
+            "type": "java",
+            "name": "Launch mainTanah",
+            "request": "launch",
+            "mainClass": "Jobsheet_3.Source_Code.Tugas.mainTanah",
+            "projectName": "Algoritma-dan-Struktur-Data_b7f24b95"
+        },
+        {
+            "type": "java",
+            "name": "Launch ArrayBalok",
+            "request": "launch",
+            "mainClass": "Jobsheet_3.Source_Code.Percobaan.ArrayBalok",
+            "projectName": "Algoritma-dan-Struktur-Data_b7f24b95"
+        },
+        {
+            "type": "java",
             "name": "Launch tanahMain2",
             "request": "launch",
             "mainClass": "Jobsheet_3.Source_Code.Tugas.tanahMain2",
