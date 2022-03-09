@@ -6,6 +6,27 @@
     "configurations": [
         {
             "type": "java",
+            "name": "Launch arrayObejctModif",
+            "request": "launch",
+            "mainClass": "Jobsheet_3.Source_Code.Percobaan.arrayObejctModif",
+            "projectName": "Algoritma-dan-Struktur-Data_b7f24b95"
+        },
+        {
+            "type": "java",
+            "name": "Launch arrayObject",
+            "request": "launch",
+            "mainClass": "Jobsheet_3.Source_Code.Percobaan.arrayObject",
+            "projectName": "Algoritma-dan-Struktur-Data_b7f24b95"
+        },
+        {
+            "type": "java",
+            "name": "Launch segitigaMain",
+            "request": "launch",
+            "mainClass": "Jobsheet_3.Source_Code.Percobaan.segitigaMain",
+            "projectName": "Algoritma-dan-Struktur-Data_b7f24b95"
+        },
+        {
+            "type": "java",
             "name": "Launch mainMahasiswa",
             "request": "launch",
             "mainClass": "Jobsheet_3.Source_Code.Tugas.mainMahasiswa",

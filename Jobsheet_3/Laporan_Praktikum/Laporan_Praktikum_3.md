@@ -74,7 +74,7 @@ ppArray[1] .panjang = 80;
 ppArray[1] .lebar = 40;
 ~~~
 
-*KOde program tersebut merupakan object yang dibuat untuk mengisi array persegiPanjang yang telah dideklarasi dan diinstansiasikan sebelumnya*
+*Kode program tersebut merupakan object yang dibuat untuk mengisi array persegiPanjang yang telah dideklarasi dan diinstansiasikan sebelumnya*
 
 5. Mengapa class main dan juga class PersegiPanjang dipisahkan pada uji coba 3.2?
 
@@ -83,10 +83,122 @@ ppArray[1] .lebar = 40;
 ### **3.3 Menerima Input Isian Array Menggunakan Looping**
 
 ### *3.3.1 Langkah-langkah Percobaan*
+~~~java
+package Jobsheet_3.Source_Code.Percobaan;
+
+import java.util.Scanner;
+
+public class arrayObject {
+    public static void main(String[] args){
+        Scanner sc = new Scanner(System.in);
+
+        PersegiPanjang[] ppArray = new PersegiPanjang[3];
+
+        for(int i = 0; i < ppArray.length; i++){
+            ppArray[i] = new PersegiPanjang();
+            System.out.println("Persegi Panjang ke-" + i);
+            System.out.print("Masukkan nilai panjang: ");
+            ppArray[i].panjang = sc.nextInt();
+            System.out.print("Masukkan nilai lebar: ");
+            ppArray[i].lebar = sc.nextInt();
+        }
+
+        for(int i = 0; i < ppArray.length; i++){
+            System.out.println("Persegi Panjang ke-" + i);
+            System.out.println("Panjang: " + ppArray[i].panjang + ", Lebar: " + ppArray[i].lebar);
+        }
+    }   
+}
+~~~
 
 ### *3.3.2 Verifikasi Hasil Percobaan*
 
+<img src = "Screenshot (496).png">
+
 ### *3.3.3 Pertanyaan*
+
+1. Apakah array of object dapat diimplementasikan pada array 2 Dimensi?
+
+*Iya, array of object dapat diimplementasikan pada 2 dimensi*
+
+2. Jika jawaban soal no satu iya, berikan contohnya! Jika tidak, jelaskan!
+
+*Contohnya adalah pada program java yang bisa menyimpan data mahasiswa yang berisikan nama dan kelasnya*
+~~~java
+import java.util.Scanner;
+
+public class percobaanTiga{
+    public static void main(String[] args){
+        Scanner input = new Scanner(System.in);
+        System.out.print("Jumlah Mahasiswa: ");
+        int n = input.nextInt();
+        coba[][] mhs = new coba[n][1];
+
+        for (int j= 0; int < mhs[i].length; j++){
+            mhs[i][j] = new coba();
+            System.out.print("Masukkan Nama: ");
+            mhs[i][j].nama = input.next().charAt(0);
+            System.out.print("Masukkan Kelas: ");
+            mhs[i][j].data = input.next().charAt(0);
+            System.out.print();
+        }
+    }
+}
+~~~
+
+3. Jika diketahui terdapat class Persegi yang memiliki atribut sisi bertipe integer, maka kode
+dibawah ini akan memunculkan error saat dijalankan. Mengapa?
+~~~java
+Persegi[] pgArray = new Persegi[100];
+pgArray[5].sisi = 20;
+~~~
+
+*Kode program tersebut error ketika dijalankan, karena belum dibuatkan objeknya sehingga ditambahkan kode program seperti berikut:*
+
+~~~java
+pgArray[5] = new Persegi();
+~~~
+
+4. Modifikasi kode program pada praktikum 3.3 agar length array menjadi inputan dengan Scanner!
+
+~~~java
+package Jobsheet_3.Source_Code.Percobaan;
+
+import java.util.Scanner;
+
+public class arrayObejctModif {
+    public static void main(String[] args){
+        Scanner sc = new Scanner(System.in);
+        System.out.print("Masukkan panjang Elemen: ");
+        int n = sc.nextInt();
+
+        PersegiPanjang[] ppArray = new PersegiPanjang[n];
+
+        for(int i = 0; i < ppArray.length; i++){
+            ppArray[i] = new PersegiPanjang();
+            System.out.println("Persegi Panjang ke-" + i);
+            System.out.print("Masukkan nilai panjang: ");
+            ppArray[i].panjang = sc.nextInt();
+            System.out.print("Masukkan nilai lebar: ");
+            ppArray[i].lebar = sc.nextInt();
+        }
+
+        for(int i = 0; i < ppArray.length; i++){
+            System.out.println("Persegi Panjang ke-" + i);
+            System.out.println("Panjang: " + ppArray[i].panjang + ", Lebar: " + ppArray[i].lebar);
+        }
+    }
+}
+~~~
+
+*Output*
+
+<img src = "Screenshot (497).png">
+
+5. Apakah boleh Jika terjadi duplikasi instansiasi array of objek, misalkan saja instansiasi dilakukan
+pada ppArray[i] sekaligus ppArray[0]?Jelaskan !
+
+*Pernyataan tersebut boleh dilakukan, karena apabila terjadi sebuah duplikasi pada array yang sama, maka nilai array yang sudah terisi akan tergantikan dengan nilai array yang terbaru yaitu ppArray[0]*
 
 ### **3.4 Operasi Matematika Atribut Object Array**
 
@@ -162,6 +274,56 @@ atributnya sebagai berikut:
 
 5. Kemudian menggunakan looping, cetak luas dan keliling dengan cara memanggil method
 hitungLuas() dan hitungKeliling().
+
+*Jawaban No. 2- 5*
+~~~java
+package Jobsheet_3.Source_Code.Percobaan;
+
+public class segitiga {
+    public int alas;
+    public int tinggi;
+    
+    public segitiga(int a, int t){
+        alas = a;
+        tinggi = t;
+    }
+    
+    public int hitungLuas(){
+        return alas * tinggi / 2;
+    }
+
+    public int hitungKeliling(){
+        return alas + alas + alas;
+    }
+}
+~~~
+
+~~~java
+package Jobsheet_3.Source_Code.Percobaan;
+
+public class segitigaMain {
+    public static void main(String[] args){
+        segitiga[] sgArray = new segitiga[4];
+
+        sgArray[0] = new segitiga(10, 4);
+        sgArray[1] = new segitiga(20, 10);
+        sgArray[2] = new segitiga(15, 6);
+        sgArray[3] = new segitiga(25, 10);
+
+        for(int i = 0; i < 4; i++){
+            System.out.println("Luas Segitiga ke-" + i + ": " + sgArray[i].hitungLuas());
+        }
+
+        for(int i = 0; i< 4; i++){
+            System.out.println("Keliling Segitiga ke-" + i + ": " + sgArray[i].hitungKeliling());
+        }
+    }
+}
+~~~
+
+*Output*
+
+<img src = "Screenshot (494).png">
 
 ### **3.5 Latihan Praktikum**
 **Nomor 1**
