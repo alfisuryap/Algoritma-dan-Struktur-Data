@@ -31,5 +31,6 @@ public class mainTanah {
         }
         y = tnArray[0].tanahTerluas(luas);
         System.out.println("Tanah terluas : Tanah " + (y + 1));
+        
     }
 }

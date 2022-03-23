@@ -24,7 +24,6 @@ public class MainSum {
         System.out.println("=======================================================================");
         System.out.println("Algoritma Divide conquer");
         System.out.println("Total keuntungan selama " + sm.elemen + " bulan adalah = " + sm.totalDC(sm.keuntungan, 0, sm.elemen - 1));
+        
     }
-
-
 }
