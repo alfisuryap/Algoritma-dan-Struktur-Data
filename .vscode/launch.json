@@ -6,6 +6,13 @@
     "configurations": [
         {
             "type": "java",
+            "name": "Launch MainPangkat",
+            "request": "launch",
+            "mainClass": "Jobsheet_4.Source_Code.Percobaan.MainPangkat",
+            "projectName": "Algoritma-dan-Struktur-Data_b7f24b95"
+        },
+        {
+            "type": "java",
             "name": "Launch MainSum",
             "request": "launch",
             "mainClass": "Jobsheet_4.Source_Code.Percobaan.MainSum",
