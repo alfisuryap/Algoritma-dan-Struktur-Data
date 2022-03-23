@@ -3,35 +3,29 @@ package Jobsheet_4.Source_Code.Tugas;
 import java.util.Scanner;
 
 public class MainLatihan {
-    public class LatihanMain {
-        public static void main(String[] args) {
-            Scanner sc = new Scanner(System.in);
-            System.out.println("=======================================================");
-            System.out.println("\t\t PEMILIHAN KETUA BEM KOTA MALANG");
-            System.out.println("=======================================================");
-            System.out.println("Masukkan Jumlah Kandidat BEM = ");
-            Latihan pol = new Latihan();
-            Latihan[] bem = new Latihan[pol.jumlahKandidat];
-            
-            for(int i = 0; i < pol.jumlahKandidat; i++) {
-                bem[i] = new Latihan();
-                System.out.println("Nama Kandidat BEM ke- " + (i+1) + ": ");
-                bem[i].kandidat = sc.nextLine();
-            }
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
 
-            for (int i = 0; i < pol.jumlahKandidat; i++) {
-                System.out.println("Jumlah Pemilih Suara Kandidat BEM ke = " + (i+1) + ": ");
-                bem[i].vote = sc.nextInt();
-                pol.jumlahVote += bem[i].vote;
-            }
-
-            System.out.println("=======================================================");
-            int hasil_bem = pol.hitungHasil(pol.jumlahVote, bem[0].vote, bem[1].vote, bem[2].vote, bem[3].vote);
-            if(hasil_bem == 0) {
-                System.out.println("Kandidat memiliki mayoritas hampir sama");
-            }else{
-                System.out.println("Ketua BEM Kota Malang Adalah " + bem[hasil_bem-1].kandidat);
-            }
+        System.out.println("----------------- PEMILIHAN RAYA BADAN EKSEKUTIF MAHASISWA 2022 ---------------");
+        Latihan lat = new Latihan();
+        Latihan[] qwer = new Latihan[lat.jmlhKandidat];
+        for (int i = 0; i < lat.jmlhKandidat; i++) {
+            qwer[i] = new Latihan();
+            System.out.print("Nama Calon Presiden BEM ke-" + (i + 1) + " : ");
+            qwer[i].kandidat = sc.nextLine();
         }
+
+        System.out.println("-------------------------------------------------------------------------------");
+        for (int i = 0; i < lat.jmlhKandidat; i++) {
+            System.out.print("Masukkan Jumlah Suara Calon Presiden BEM ke-" + (i + 1) + " : ");
+            qwer[i].vote = sc.nextInt();
+            lat.jumlahVote += qwer[i].vote;
+        }
+
+        System.out.println("-------------------------------------------------------------------------------");
+        int hasil = lat.hasilPemungutanSwara(lat.jumlahVote,qwer[0].vote, qwer[1].vote, qwer[2].vote, qwer[3].vote);
+        System.out.println("Presiden BEM Terpilih Dimenangkan oleh : " + qwer[hasil - 1].kandidat);
+
+        System.out.println("-------------------------------------------------------------------------------");
     }
 }

@@ -100,8 +100,55 @@ for?Buktikan!
 <img src = "Screenshot (520).png">
 
 4. Tambahkan pegecekan waktu eksekusi kedua jenis method tersebut!
+~~~java
+package Jobsheet_4.Source_Code.Percobaan;
+
+import java.util.Scanner;
+
+public class MainFaktoQuestionTime {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        System.out.println("=======================================================");
+        System.out.print("Masukkan jumlah elemen yang ingin dihitung : ");
+        int elemen = sc.nextInt();
+
+        Faktorial [] fk = new Faktorial[elemen];
+        for (int i = 0; i < elemen; i++) {
+            fk[i] = new Faktorial();
+            System.out.print("Masukkan nilai data ke-" + (i + 1) + " : ");
+            fk[i].nilai = sc.nextInt();
+        }
+
+        System.out.println("=======================================================");
+        System.out.println("Hasil Faktorial dengan Brute Force");
+        long start = System.currentTimeMillis();
+        for (int i = 0; i < elemen; i++) {
+            System.out.println("Fakrotial dari nilai " + fk[i].nilai + " adalah : " + fk[i].faktorialBF(fk[i].nilai));
+        }
+        long end = System.currentTimeMillis();
+
+        System.out.println("=======================================================");
+        System.out.println("Hasil Faktorial dengan Divide and Conquer");
+        long start2 = System.currentTimeMillis();
+        for (int i = 0; i < elemen; i++) {
+            System.out.println("Faktorial dari nilai " + fk[i].nilai + " adalah " + fk[i].faktorialDC(fk[i].nilai));
+        }
+        long end2 = System.currentTimeMillis();
+
+        System.out.println(end2-start2);
+        System.out.println("=======================================================");
+    
+    }
+}
+~~~
 
 5. Buktikan dengan inputan elemen yang di atas 20 angka, apakah ada perbedaan waktu eksekusi?
+
+<img src = "Screenshot (524).png">
+
+<img src = "Screenshot (525).png">
+
+<img src = "Screenshot (526).png">
 
 ### **4.3 Menghitung Hasil Pangkat dengan Algoritma Brute Force dan Divide and Conquer**
 
@@ -205,9 +252,165 @@ else//bilangan genap
 
 4. Modifikasi kode program tersebut, anggap proses pengisian atribut dilakukan dengan
 konstruktor.
+~~~java
+package Jobsheet_4.Source_Code.Percobaan;
+
+public class PangkatQuestion {
+    public int nilai, pangkat;
+
+    public PangkatQuestion(int n, int p){ //konstruktor
+        nilai = n;
+        pangkat = p;
+    }
+    
+    public int pangkatBF(int a, int n) {
+        int hasil = 1;
+        for (int i = 0; i < n; i++) {
+            hasil = hasil * a;
+        }
+        return hasil;
+    }
+
+    public int pangkatDC(int a, int n) {
+        if (n == 0) {
+            return 1;
+        }
+        else {
+            if (n % 2 == 1) {
+                return (pangkatDC (a, n/2) * pangkatDC (a, n/2) * a);
+            }else {
+                return (pangkatDC (a, n/2) * pangkatDC (a, n/2));
+            }
+        }
+    }
+}
+~~~
+
+~~~java
+package Jobsheet_4.Source_Code.Percobaan;
+
+import java.util.Scanner;
+
+public class MainPangkatQuestion{
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        
+        PangkatQuestion[]png = new PangkatQuestion[5];
+        png[0] = new PangkatQuestion(5, 2);
+        png[1] = new PangkatQuestion(10, 2);
+        png[2] = new PangkatQuestion(15, 4);
+        png[3] = new PangkatQuestion(20, 2);
+        png[4] = new PangkatQuestion(25, 2);
+
+        System.out.println("=================================================");
+        System.out.println("Hasil Pangkat dengan Bruce Force");
+        for(int i=0; i<png.length; i++){
+            System.out.println("Nilai "+png[i].nilai+" pangkat "+png[i].pangkat+" adalah : "+png[i].pangkatBF(png[i].nilai, png[i].pangkat));
+        }
+        
+        System.out.println("=================================================");
+        System.out.println("Hasil Pangkat dengan Divide Conquer");
+        for(int i=0; i<png.length; i++){
+            System.out.println("Nilai "+png[i].nilai+" pangkat "+png[i].pangkat+" adalah : "+png[i].pangkatDC(png[i].nilai, png[i].pangkat));
+        }
+
+        System.out.println("=================================================");
+    }
+}
+~~~
+
+*Output*
+
+<img src = "Screenshot (529).png">
 
 5. Tambahkan menu agar salah satu method yang terpilih saja yang akan dijalankan!
+~~~java
+package Jobsheet_4.Source_Code.Percobaan;
 
+public class PangkatQuestionMenu {
+    public int nilai, pangkat;
+
+    public PangkatQuestionMenu(int n, int p){ //konstruktor
+        nilai = n;
+        pangkat = p;
+    }
+    
+    public int pangkatBF(int a, int n) {
+        int hasil = 1;
+        for (int i = 0; i < n; i++) {
+            hasil = hasil * a;
+        }
+        return hasil;
+    }
+
+    public int pangkatDC(int a, int n) {
+        if (n == 0) {
+            return 1;
+        }
+        else {
+            if (n % 2 == 1) {
+                return (pangkatDC (a, n/2) * pangkatDC (a, n/2) * a);
+            }else {
+                return (pangkatDC (a, n/2) * pangkatDC (a, n/2));
+            }
+        }
+    }
+}
+~~~
+
+~~~java
+package Jobsheet_4.Source_Code.Percobaan;
+
+import java.util.Scanner;
+
+public class MainPangkatQuestionMenu {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        
+        PangkatQuestionMenu[]png = new PangkatQuestionMenu[5];
+        png[0] = new PangkatQuestionMenu(5, 2);
+        png[1] = new PangkatQuestionMenu(10, 2);
+        png[2] = new PangkatQuestionMenu(15, 4);
+        png[3] = new PangkatQuestionMenu(20, 2);
+        png[4] = new PangkatQuestionMenu(25, 2);
+        
+        System.out.println("===========================================");
+        System.out.println("                Menu Pangkat               ");
+        System.out.println("===========================================");
+        System.out.println("1. Menggunakan Brute Force ");
+        System.out.println("2. Menggunakan Devide Conquer ");
+        System.out.println("3. Exit ");
+        System.out.print("Silahkan Pilih Metode Perhitungan : ");
+        int pilih = sc.nextInt();
+        
+        switch(pilih){
+            case 1 :
+                System.out.println("============================================");
+                System.out.println("Hasil pangkat dengan Brute force ");     
+                for(int i=0; i<png.length; i++){
+                    System.out.println("Nilai "+png[i].nilai+" pangkat "+png[i].pangkat+" adalah "+png[i].pangkatBF(png[i].nilai,png[i].pangkat));
+                }
+            break;
+            case 2 :
+                System.out.println("============================================");
+                System.out.println("Hasil pangkat dengan Devide Conquer ");
+                for(int i=0; i<png.length; i++){
+                    System.out.println("Nilai "+png[i].nilai+" pangkat "+png[i].pangkat+" adalah "+png[i].pangkatDC(png[i].nilai,png[i].pangkat));
+                }
+            break;
+            case 3 :
+                System.out.println("------------Terima Kasih---------");
+            break;
+            default :
+                System.out.println("------ input yang anda masukkan salah -------");
+        }
+    }
+}
+~~~
+
+*Output*
+
+<img src = "Screenshot (530).png">
 
 ### **4.4 Menghitung Sum Array dengan Algoritma Brute Force dan Divide and Conquer**
 
@@ -306,6 +509,179 @@ public class MainSum {
 *Karena perhitungan keuntungan pada method totalDC() tersebut membagi bagiannya menjadi left(l) dan right(r). Maka dari itu membutuhkan variable mid untuk perhitungan semua bagian tengahnya.*
 
 5. Program perhitungan keuntungan suatu perusahaan ini hanya untuk satu perusahaan saja. Bagaimana cara menghitung sekaligus keuntungan beberapa bulan untuk beberapa perusahaan.(Setiap perusahaan bisa saja memiliki jumlah bulan berbeda-beda)? Buktikan dengan program!
+~~~java
+package Jobsheet_4.Source_Code.Percobaan;
+
+public class SumQuestion {
+    public int elemen;
+    public double keuntungan[];
+    public double total;
+    
+    public double totalBF(double arr[]){
+        for(int i=0; i<arr.length; i++){
+            total = total + arr[i];
+        }
+        return total;
+    }
+    public double totalDC(double arr[], int l, int r) {
+        if (l == r) {
+            return arr[l];
+        } else if (l < r) {
+            int mid = (l + r) / 2;
+            double lsum = totalDC(arr, l, mid - 1);
+            double rsum = totalDC(arr, mid + 1, r);
+            return lsum + rsum + arr[mid];
+        }
+        return 0;
+    }
+}
+~~~
+
+~~~java
+package Jobsheet_4.Source_Code.Percobaan;
+
+import java.util.Scanner;
+
+public class MainSumQuestion {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+    
+        System.out.println("============================================================");
+        System.out.println("Program Menghitung Keuntungan Total (Satuan Juta. Misal 5,9)");
+        System.out.print("Masukkan jumlah perusahaan : ");
+        int per = sc.nextInt();
+    
+        SumQuestion peru[]= new SumQuestion[per];
+        for(int i=0; i<per; i++){
+            peru[i] = new SumQuestion();
+            System.out.println("============================================================");
+            System.out.println("Perusahaan ke-" + (i + 1));
+            System.out.print("Masukkan Jumlah Bulan : ");
+            peru[i].elemen = sc.nextInt();
+        
+            peru[i].keuntungan = new double[peru[i].elemen];
+        
+            System.out.println("============================================================");
+            for(int j=0; j<peru[i].elemen; j++){
+                System.out.print("Masukkan untung bulan ke-" + (j + 1) + " = ");
+                peru[i].keuntungan[j] = sc.nextDouble();
+            }
+        }
+        System.out.println("============================================================");
+        SumQuestion dat =new SumQuestion();
+        for(int i=0; i<peru.length; i++){
+            System.out.println("Perusahaan ke-" + (i + 1));
+            System.out.println("Jumlah Bulan : " + peru[i].elemen);
+            System.out.println();
+            System.out.println("Algoritma Brute Force");
+            System.out.printf("Total keuntungam perusahaan selama " + peru[i].elemen + " bulan adalah : %.2f ", dat.totalBF(peru[i].keuntungan));
+            System.out.println();
+            System.out.println("Algoritma Divide Conquer");
+            System.out.printf("Total keuntungam perusahaan selama " + peru[i].elemen + " bulan adalah : %.2f ", dat.totalDC(peru[i].keuntungan, 0, peru[i].elemen-1));
+            System.out.println("\n============================================================");
+        }
+    }
+}
+~~~
+
+*Output*
+
+<img src = "Screenshot (531).png">
 
 ### **4.5 Latihan Praktikum**
+~~~java
+package Jobsheet_4.Source_Code.Tugas;
 
+import java.util.Scanner;
+
+public class Latihan {
+    public int vote, jumlahVote=0, jumlahKandidat = 4;
+    public String kandidat;
+    public static int nilai=1, acc=0, acc2=0, control = 0;
+    public static int[] array = new int[10000];
+
+    public static int hitungHasil(int js, int k1, int k2, int k3, int k4) {
+        if (nilai == 5) {
+            return 1;
+        }
+        if (nilai == 1 && k1 > 0) {
+            array[control] = nilai;
+            control++;
+            nilai++;
+            return hitungHasil(js, k1 - 1, k2, k3, k4);
+        } else if (nilai == 2 && k2 > 0) {
+            array[control] = nilai;
+            control++;
+            nilai++;
+            return hitungHasil(js, k1, k2 - 1, k3, k4);
+        } else if (nilai == 3 && k3 > 0) {
+            array[control] = nilai;
+            control++;
+            nilai++;
+            return hitungHasil(js, k1, k2, k3 - 1, k4);
+        } else if (nilai == 4 && k4 > 0) {
+            array[control] = nilai;
+            control++;
+            nilai++;
+            return hitungHasil(js, k1, k2, k3, k4 - 1);
+        } else if (k1 == 0 && k2 == 0 && k3 == 0 && k4 == 0) {
+            if (array[acc] == array[acc+1] && acc+1 < js) {
+                return array[acc];
+
+            } else if (acc + 2 < js) {
+                acc += 2;
+                return hitungHasil(js, k1, k2, k3, k4);
+            } else {
+                return 0;
+            }
+        } else {
+            nilai++;
+            return hitungHasil(js, k1, k2, k3, k4);
+        }
+    }
+}
+~~~
+
+~~~java
+package Jobsheet_4.Source_Code.Tugas;
+
+import java.util.Scanner;
+
+public class MainLatihan {
+    public class LatihanMain {
+        public static void main(String[] args) {
+            Scanner sc = new Scanner(System.in);
+            System.out.println("=======================================================");
+            System.out.println("\t\t PEMILIHAN KETUA BEM KOTA MALANG");
+            System.out.println("=======================================================");
+            System.out.println("Masukkan Jumlah Kandidat BEM = ");
+            Latihan pol = new Latihan();
+            Latihan[] bem = new Latihan[pol.jumlahKandidat];
+            
+            for(int i = 0; i < pol.jumlahKandidat; i++) {
+                bem[i] = new Latihan();
+                System.out.println("Nama Kandidat BEM ke- " + (i+1) + ": ");
+                bem[i].kandidat = sc.nextLine();
+            }
+
+            for (int i = 0; i < pol.jumlahKandidat; i++) {
+                System.out.println("Jumlah Pemilih Suara Kandidat BEM ke = " + (i+1) + ": ");
+                bem[i].vote = sc.nextInt();
+                pol.jumlahVote += bem[i].vote;
+            }
+
+            System.out.println("=======================================================");
+            int hasil_bem = pol.hitungHasil(pol.jumlahVote, bem[0].vote, bem[1].vote, bem[2].vote, bem[3].vote);
+            if(hasil_bem == 0) {
+                System.out.println("Kandidat memiliki mayoritas hampir sama");
+            }else{
+                System.out.println("Ketua BEM Kota Malang Adalah " + bem[hasil_bem-1].kandidat);
+            }
+        }
+    }
+}
+~~~
+
+*Output*
+
+<img src = "Screenshot (522).png">

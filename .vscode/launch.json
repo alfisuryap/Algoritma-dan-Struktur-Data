@@ -6,6 +6,41 @@
     "configurations": [
         {
             "type": "java",
+            "name": "Launch MainSumQuestion",
+            "request": "launch",
+            "mainClass": "Jobsheet_4.Source_Code.Percobaan.MainSumQuestion",
+            "projectName": "Algoritma-dan-Struktur-Data_b7f24b95"
+        },
+        {
+            "type": "java",
+            "name": "Launch MainPangkatQuestionMenu",
+            "request": "launch",
+            "mainClass": "Jobsheet_4.Source_Code.Percobaan.MainPangkatQuestionMenu",
+            "projectName": "Algoritma-dan-Struktur-Data_b7f24b95"
+        },
+        {
+            "type": "java",
+            "name": "Launch MainPangkatQuestion",
+            "request": "launch",
+            "mainClass": "Jobsheet_4.Source_Code.Percobaan.MainPangkatQuestion",
+            "projectName": "Algoritma-dan-Struktur-Data_b7f24b95"
+        },
+        {
+            "type": "java",
+            "name": "Launch MainFaktoQuestionTime",
+            "request": "launch",
+            "mainClass": "Jobsheet_4.Source_Code.Percobaan.MainFaktoQuestionTime",
+            "projectName": "Algoritma-dan-Struktur-Data_b7f24b95"
+        },
+        {
+            "type": "java",
+            "name": "Launch MainLatihan",
+            "request": "launch",
+            "mainClass": "Jobsheet_4.Source_Code.Tugas.MainLatihan",
+            "projectName": "Algoritma-dan-Struktur-Data_b7f24b95"
+        },
+        {
+            "type": "java",
             "name": "Launch MainFaktoQuestion",
             "request": "launch",
             "mainClass": "Jobsheet_4.Source_Code.Percobaan.MainFaktoQuestion",
