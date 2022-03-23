@@ -81,11 +81,23 @@ public class MainFaktorial {
 
 1. Jelaskan mengenai base line Algoritma Divide Conquer untuk melakukan pencarian nilai faktorial!
 
+*if(n==1) return 1; jika nilai yang akan dimasukkan nantinya adalah 1 maka hasil yang akan ditampilkan oleh program main nantinya adalah 1 dan berfungsi sebagai batas dari Divide Conquer dimana perulangan kali akan berakhir saat n sudah sama dengan 1*
+
 2. Pada implementasi Algoritma Divide and Conquer Faktorial apakah lengkap terdiri dari 3 tahapan
 divide, conquer, combine? Jelaskan masing-masing bagiannya pada kode program!
 
+*Divide : membagi masalah menjadi beberapa masalah yang memiliki kemiripan dengan nmasalah semua namum berukuran lebih kecil.*
+
+*Conquer : menyelesaikan masing-masing masalah secara rekursif.*
+
+*Combine : menggabungkan solusi masing-masing masalah sehingga membentuk solusi masalah semula.*
+
 3. Apakah memungkinkan perulangan pada method faktorialBF() dirubah selain menggunakan
 for?Buktikan!
+
+*Bisa, selama termasuk looping maka jenis looping apapun bisa digunakan pada method faktorialBF() dan saya sudah mencoba membuktikannya dengan looping jenis while dan program tetap berjalan dengan baik.*
+
+<img src = "Screenshot (520).png">
 
 4. Tambahkan pegecekan waktu eksekusi kedua jenis method tersebut!
 
@@ -164,11 +176,15 @@ public class MainPangkat {
 
 ### *4.3.2 Verifikasi Percobaan*
 
-
+<img src = "Screenshot (518).png">
 
 ### *4.3.3 Pertanyaan*
 
 1. Jelaskan mengenai perbedaan 2 method yang dibuat yaitu PangkatBF() dan PangkatDC()!
+
+*- Pada methos pangkatBF() operasi mencari hitung hasil pangkat dilakukan dengan cara Brute Force yang dilakukan dengan iterative/perulangan/looping dan algoritma Brute Forcenya adalah mendeklarasikan dahulu hasil = 1 lalu melakukan perulangan dengan batas n (pangkatnya) dan dalam perulangan tersebut dilakukan looping dari hasil tadi dikali dengan a (bilangan yang akan dipangkat) dan perulangan akan terus berlanjut hingga < n sehingga a akan menghasilkan nilai hasil dari pemangkatannya.*
+
+*- Pada method pangkatDC() operasi mencari hitung hasil pangkat dilakukan dengan cara Divide Conquer yang dilakukan dengan rekursif dan algoritma Divide Conquer yang dilakukan terbagi dalam 3 tahap yaitu : Divide => memecah masalah yang diimplementasikan dalam pemilihan kondisi berupa if-else pada method; Conquer => penyelesaian dari setiap masalah yang tercantum pada else; Combine => menggabungkan kembali menjadi sebuah solusi yang diimplementasika pada return-an di else.*
 
 2. Pada method PangkatDC() terdapat potongan program sebagai berikut:
 Jelaskan arti potongan kode tersebut
@@ -179,7 +195,13 @@ else//bilangan genap
     return (pangkatDC(a,n/2) * pangkatDC(a,n/2));
 ~~~
 
+*- Jika n (pangkat bilangan) dimodulus 2 hasilnya adalah 1 maka returnya (kembalian nilai) adalah hasil dari (pangkatDC(a,n/2) * pangkatDC(a,n/2) * a) karena bilangan pangkatnya adalah ganjil*
+
+*- Jika n (pangkat bilangan) dimodulus 2 hasilnya dalah tidak sama dengan 1 maka returnnya (kembalian nilai) adalah hasil dai (pangkatDC(a,n/2) * pangkatDC(a,n/2) karena bilangan pangkatnya adalah genap*
+
 3. Apakah tahap combine sudah termasuk dalam kode tersebut?Tunjukkan!
+
+*Sudah, tahap combine dalam kode tersebut ditunjukkan pada sintaks return atau pengembalian nilai dimana hasil dari conquer atau penyelesaian masalah sebelumnya direturn-kan semua dan dalam tahap combine dilakukan pemanggilan hasil dari bilangan berpangkat tersebut.*
 
 4. Modifikasi kode program tersebut, anggap proses pengisian atribut dilakukan dengan
 konstruktor.
@@ -260,18 +282,28 @@ public class MainSum {
 
 ### *4.4.2 Verifikasi Percobaan*
 
+<img src = "Screenshot (519).png">
+
 ### *4.4.3 Pertanyaan*
 
 1. Berikan ilustrasi perbedaan perhitungan keuntungan dengan method TotalBF() ataupun TotalDC()
 
+*pangkatBF meproses langsung inputan, sedangkan pangkatDC membagi atau memecah sebuah inputan lalu menjumlahkannya lagi di akhir proses.*
+
 2. Perhatikan output dari kedua jenis algoritma tersebut bisa jadi memiliki hasil berbeda di belakang koma. Bagaimana membatasi output di belakang koma agar menjadi standar untuk kedua jenis algoritma tersebut.
+
+*Membagi masalah menjadi beberapa masalah yang mempunyai kemiripan masalah namun masalah tersebut berukuran lebih kecil lalu menyelesaikan masing-masing masalah secara rekursif dan menggabungkan sebuah solusi masalah sehingg membentuk sebuah solusi masalah semula.*
 
 3. Mengapa terdapat formulasi return value berikut?Jelaskan!
 ~~~java
     return lsum+rsum+arr[mid];
-~~~~
+~~~
+
+*Untuk mereturn-kan semua hasil dari penjumlahan keuntungan dari (lsum) lalu dengan (rsum) dan dengan (arr[mid]), sehingga dari penjumlahan ketiganya bisa ditemukan berapa banyak keuntungan yang didapat dari perusahaan tersaebut dalam rentang waktu n bulan.*
 
 4. Kenapa dibutuhkan variable mid pada method TotalDC()?
+
+*Karena perhitungan keuntungan pada method totalDC() tersebut membagi bagiannya menjadi left(l) dan right(r). Maka dari itu membutuhkan variable mid untuk perhitungan semua bagian tengahnya.*
 
 5. Program perhitungan keuntungan suatu perusahaan ini hanya untuk satu perusahaan saja. Bagaimana cara menghitung sekaligus keuntungan beberapa bulan untuk beberapa perusahaan.(Setiap perusahaan bisa saja memiliki jumlah bulan berbeda-beda)? Buktikan dengan program!
 

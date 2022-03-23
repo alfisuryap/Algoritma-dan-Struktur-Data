@@ -6,6 +6,20 @@
     "configurations": [
         {
             "type": "java",
+            "name": "Launch MainFaktoQuestion",
+            "request": "launch",
+            "mainClass": "Jobsheet_4.Source_Code.Percobaan.MainFaktoQuestion",
+            "projectName": "Algoritma-dan-Struktur-Data_b7f24b95"
+        },
+        {
+            "type": "java",
+            "name": "Launch MainLatihan$LatihanMain",
+            "request": "launch",
+            "mainClass": "Jobsheet_4.Source_Code.Tugas.MainLatihan$LatihanMain",
+            "projectName": "Algoritma-dan-Struktur-Data_b7f24b95"
+        },
+        {
+            "type": "java",
             "name": "Launch MainPangkat",
             "request": "launch",
             "mainClass": "Jobsheet_4.Source_Code.Percobaan.MainPangkat",
