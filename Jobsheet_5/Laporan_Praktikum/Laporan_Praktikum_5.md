@@ -123,7 +123,7 @@ public class Main {
 
 1. Terdapat di method apakah proses bubble sort?
 
-*Terdapat pada method bubbleSort(), dimana method bubbleSort terdapat pada class "daftarMahasiswaBerprestasi", untuk lebih jelasnya kami tampilkan method bubbleSort() di bawah ini*
+*Terdapat pada method bubbleSort(), dimana method bubbleSort terdapat pada class "DaftarMahasiswaBerprestasi", untuk lebih jelasnya kami tampilkan method bubbleSort() di bawah ini*
 
 ~~~java
 void bubbleSort(){
@@ -142,7 +142,7 @@ void bubbleSort(){
 
 2. Terdapat di method apakah proses selection sort?
 
-*Pada percobaan 1 masih belum ditambahkan method selection sort, akan tetapi pada percobaan 2 method selection sort sudah ditambahkan. Method selection sort terdapat pada method selectionSort(), dimana method selection short ini masih di dalam class yang sama dengan bubble sort yaitu pada class "daftarMahasiswaBerprestasi", berikut adalah kode programnya*
+*Pada percobaan 1 masih belum ditambahkan method selection sort, akan tetapi pada percobaan 2 method selection sort sudah ditambahkan. Method selection sort terdapat pada method selectionSort(), dimana method selection short ini masih di dalam class yang sama dengan bubble sort yaitu pada class "DaftarMahasiswaBerprestasi", berikut adalah kode programnya*
 
 ~~~java
 void selectionSort(){
