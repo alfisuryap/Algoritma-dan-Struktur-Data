@@ -2,7 +2,7 @@ package Jobsheet_5.Source_Code.Percobaan;
 
 public class MainTugas {
     public static void main(String[] args) {
-        DaftarMahasiswaBerprestasi list = new DaftarMahasiswaBerprestasi();
+        DaftarMahasiswaBerprestasiTugas list = new DaftarMahasiswaBerprestasiTugas();
         Mahasiswa m1 = new Mahasiswa("Nusa", 2017, 25, 3);
         Mahasiswa m2 = new Mahasiswa("Rara", 2012, 19, 4);
         Mahasiswa m3 = new Mahasiswa("Dompu", 2018, 19, 3.5);

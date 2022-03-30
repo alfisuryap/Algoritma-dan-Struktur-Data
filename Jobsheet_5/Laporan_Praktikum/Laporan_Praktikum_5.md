@@ -540,6 +540,97 @@ void insertionSort(boolean asc){
     }
 ~~~
 
+*Disini saya melakukan modifikasi di class DaftarMahasiswaBerprestasi dan di main class, untuk perubahan pada class daftarMahasiswaBerprestasi menambahkan parameter sebagai berikut*
+
+~~~java
+package Jobsheet_5.Source_Code.Percobaan;
+
+public class DaftarMahasiswaBerprestasiTugas {
+    Mahasiswa listMhs[] = new Mahasiswa[5];
+    int idx;
+
+    //setelah ini tuliskan method tambah()
+    void tambah(Mahasiswa m){
+        if(idx < listMhs.length){
+            listMhs[idx] = m;
+            idx++;
+        }else{
+            System.out.println("Data sudah penuh!!");
+        }
+    }
+
+    //setelah ini tuliskan method tampil()
+    void tampil(){
+        for(Mahasiswa m : listMhs){
+            m.tampil();
+            System.out.println("------------------------------");
+        }
+    }
+
+    //setelah ini tuliskan method insertionSort()
+    void insertionSort(boolean asc){
+        for(int i = 1; i < listMhs.length; i++){
+            Mahasiswa temp = listMhs[i];
+            int j = i;
+            if(asc){
+                while(j > 0 && listMhs[j - 1].ipk > temp.ipk){
+                    listMhs[j] = listMhs[j - 1];
+                    j--;
+                }
+            }else{
+                while(j > 0 && listMhs[j - 1].ipk < temp.ipk){
+                    listMhs[j] = listMhs[j - 1];
+                    j--;
+                }
+            }
+            listMhs[j] = temp;
+        }
+    }
+}
+~~~
+
+~~~java
+package Jobsheet_5.Source_Code.Percobaan;
+
+public class MainTugas {
+    public static void main(String[] args) {
+        DaftarMahasiswaBerprestasiTugas list = new DaftarMahasiswaBerprestasiTugas();
+        Mahasiswa m1 = new Mahasiswa("Nusa", 2017, 25, 3);
+        Mahasiswa m2 = new Mahasiswa("Rara", 2012, 19, 4);
+        Mahasiswa m3 = new Mahasiswa("Dompu", 2018, 19, 3.5);
+        Mahasiswa m4 = new Mahasiswa("Abdul", 2017, 23, 2);
+        Mahasiswa m5 = new Mahasiswa("Ummi", 2019, 21, 3.75);
+        
+        list.tambah(m1);
+        list.tambah(m2);
+        list.tambah(m3);
+        list.tambah(m4);
+        list.tambah(m5);
+        
+        System.out.println("Data Mahasiswa sebelum Sorting = ");
+        list.tampil();
+
+        System.out.println();
+        System.out.println("Data mahasiswa setelah sorting asc berdasarkan ipk (menggunakan Insertion Short)");
+        list.insertionSort(true);
+        list.tampil();
+        
+        System.out.println();
+        System.out.println("Data mahasiswa setelah sorting dsc berdasarkan ipk (menggunakan Insertion Short)");
+        list.insertionSort(false);
+        list.tampil();
+    }
+}
+~~~
+
+*Output*
+
+<img src = "Screenshot (543).png">
+
+<img src = "Screenshot (544).png">
+
+<img src = "Screenshot (545).png">
+
 ### **5.5 Latihan Praktikum**
 *Class "tiket"*
 
