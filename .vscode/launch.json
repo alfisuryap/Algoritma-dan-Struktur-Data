@@ -6,6 +6,20 @@
     "configurations": [
         {
             "type": "java",
+            "name": "Launch Tugas3Main",
+            "request": "launch",
+            "mainClass": "Jobsheet_6.Source_Code.Tugas.Tugas3Main",
+            "projectName": "Algoritma-dan-Struktur-Data_b7f24b95"
+        },
+        {
+            "type": "java",
+            "name": "Launch Tugas3_Array1DimensiMain",
+            "request": "launch",
+            "mainClass": "Jobsheet_6.Source_Code.Tugas.Tugas3_Array1DimensiMain",
+            "projectName": "Algoritma-dan-Struktur-Data_b7f24b95"
+        },
+        {
+            "type": "java",
             "name": "Launch MahasiswaMain",
             "request": "launch",
             "mainClass": "Jobsheet_6.Source_Code.Percobaan.MahasiswaMain",
