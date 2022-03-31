@@ -6,6 +6,13 @@
     "configurations": [
         {
             "type": "java",
+            "name": "Launch MahasiswaMain",
+            "request": "launch",
+            "mainClass": "Jobsheet_6.Source_Code.Percobaan.MahasiswaMain",
+            "projectName": "Algoritma-dan-Struktur-Data_b7f24b95"
+        },
+        {
+            "type": "java",
             "name": "Launch MainTugas",
             "request": "launch",
             "mainClass": "Jobsheet_5.Source_Code.Percobaan.MainTugas",
