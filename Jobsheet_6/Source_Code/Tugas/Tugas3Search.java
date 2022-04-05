@@ -37,7 +37,7 @@ public class Tugas3Search {
     }
     public void TampilIndex(int y, int in) {
         if (in != -1) {
-            System.out.println("Data " + y + " ditemukan pada index ke- " + in);
+            System.out.println("Data " + y + " ditemukan pada index ke-" + in);
          } else {
             System.out.println("Data " + y + "tidak ditemukan");
         }
