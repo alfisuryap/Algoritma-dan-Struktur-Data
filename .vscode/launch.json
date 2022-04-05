@@ -6,6 +6,27 @@
     "configurations": [
         {
             "type": "java",
+            "name": "Launch Tugas1Main",
+            "request": "launch",
+            "mainClass": "Jobsheet_6.Source_Code.Tugas.Tugas1Main",
+            "projectName": "Algoritma-dan-Struktur-Data_b7f24b95"
+        },
+        {
+            "type": "java",
+            "name": "Launch Tugas3_Array1DimensiMain",
+            "request": "launch",
+            "mainClass": "Jobsheet_6.Source_Code.Tugass.Tugas3_Array1DimensiMain",
+            "projectName": "Algoritma-dan-Struktur-Data_b7f24b95"
+        },
+        {
+            "type": "java",
+            "name": "Launch SortMain",
+            "request": "launch",
+            "mainClass": "Jobsheet_6.Source_Code.Percobaan.SortMain",
+            "projectName": "Algoritma-dan-Struktur-Data_b7f24b95"
+        },
+        {
+            "type": "java",
             "name": "Launch Tugas3Main",
             "request": "launch",
             "mainClass": "Jobsheet_6.Source_Code.Tugas.Tugas3Main",
