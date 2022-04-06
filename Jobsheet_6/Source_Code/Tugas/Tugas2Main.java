@@ -2,15 +2,15 @@ package Jobsheet_6.Source_Code.Tugas;
 
 import java.util.Scanner;
 
-public class Tugas1Main {
+public class Tugas2Main {
     public static void main(String[] args){
         Scanner s = new Scanner(System.in);
         Scanner sl = new Scanner(System.in);
 
-        Tugas1Search data = new Tugas1Search();
+        Tugas2Search data = new Tugas2Search();
         System.out.print("Masukkan Jumlah Mahasiswa : ");
         int jumMhs = s.nextInt();
-        Tugas1[] x = new Tugas1[jumMhs];
+        Tugas2[] x = new Tugas2[jumMhs];
         data.listMhs = x;
 
         System.out.println("-----------------------------");
@@ -26,29 +26,26 @@ public class Tugas1Main {
             System.out.print("IPK\t: ");
             double ipk = s.nextDouble();
 
-            Tugas1 m = new Tugas1(nim, nama, umur, ipk);
+            Tugas2 m = new Tugas2(nim, nama, umur, ipk);
             data.tambah(m);
         }
 
-        System.out.println("-------------------------------------------------------");
-        System.out.println("Data Mahasiswa Setelah sorting asc berdasarkan NIM");
-        System.out.println("-------------------------------------------------------");
+        System.out.println("-----------------------------");
         System.out.println("Data keseluruhan Mahasiswa : ");
         data.tampil();
-        data.selectionSort();
 
         System.out.println("____________________________________");
         System.out.println("____________________________________");
         System.out.println("Pencarian Data : ");
-        System.out.println("Masukkan NIM Mahasiswa yang dicari: ");
-        System.out.print("NIM : ");
-        int cari = s.nextInt();
+        System.out.println("Masukkan Nama Mahasiswa yang dicari: ");
+        System.out.print("Nama : ");
+        String cari = sl.nextLine();
 
         System.out.println("===================================");
-        System.out.println("menggunakan Binary Search");
-        int posisi = data.FindBinarySearch(cari, 0, jumMhs - 1);
+        System.out.println("menggunakan Sequential Search");
+        int posisi = data.FindSeqSearch(cari);
         
-        data.Tampilposisi(cari, posisi);
-        data.TampilData(cari, posisi);
+        data.tampilPosisi(cari, posisi);
+        data.tampilData(cari, posisi);
     }
 }

@@ -6,6 +6,20 @@
     "configurations": [
         {
             "type": "java",
+            "name": "Launch MahasiswaMainEdit",
+            "request": "launch",
+            "mainClass": "Jobsheet_6.Source_Code.Percobaan.MahasiswaMainEdit",
+            "projectName": "Algoritma-dan-Struktur-Data_b7f24b95"
+        },
+        {
+            "type": "java",
+            "name": "Launch Tugas2Main",
+            "request": "launch",
+            "mainClass": "Jobsheet_6.Source_Code.Tugas.Tugas2Main",
+            "projectName": "Algoritma-dan-Struktur-Data_b7f24b95"
+        },
+        {
+            "type": "java",
             "name": "Launch Tugas1Main",
             "request": "launch",
             "mainClass": "Jobsheet_6.Source_Code.Tugas.Tugas1Main",

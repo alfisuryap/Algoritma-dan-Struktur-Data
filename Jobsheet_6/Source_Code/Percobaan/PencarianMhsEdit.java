@@ -1,10 +1,10 @@
-package Jobsheet_6.Source_Code.Tugas;
+package Jobsheet_6.Source_Code.Percobaan;
 
-public class Tugas1Search {
-    Tugas1 listMhs[];
+public class PencarianMhsEdit {
+    Mahasiswa listMhs[];
     int idx;
 
-    void tambah(Tugas1 m){
+    void tambah(Mahasiswa m){
         if(idx < listMhs.length){
             listMhs[idx] = m;
             idx++;
@@ -14,34 +14,34 @@ public class Tugas1Search {
     }
 
     void tampil(){
-        for(Tugas1 m : listMhs){
+        for(Mahasiswa m : listMhs){
             m.tampil();
             System.out.println("------------------------------");
         }
     }
 
-    void selectionSort(){
-        for (int i = 0; i < listMhs.length; i++){
-            int idxMin = 1;
-            for (int j = i + 1; j < listMhs.length; j++){
-                if (listMhs[j].nim < listMhs[idxMin].nim) {
-                    idxMin=j;
-                }
+    public int FindSeqSearch(int cari){
+        int posisi = -1;
+        for(int j = 0; j < listMhs.length; j++){
+            if(listMhs[j].nim == cari){
+                posisi = j;
+                break;
             }
         }
+        return posisi;
     }
 
-    public void Tampilposisi(int x, int  pos){
+    public void tampilPosisi(int x, int  pos){
         if(pos != -1){
-            System.out.println("data\t : " + x + " ditemukan pada indeks " + pos);
+            System.out.println("data : " + x + "ditemukan pada indeks " + pos);
         }else{
             System.out.println("data " + x + "tidak ditemukan");
         }
     }
 
-    public void TampilData(int x, int pos){
+    public void tampilData(int x, int pos){
         if(pos != -1){
-            System.out.println("NIM\t : " + x);
+            System.out.println("Nim\t : " + x);
             System.out.println("Nama\t : " + listMhs[pos].nama);
             System.out.println("Umur\t : " + listMhs[pos].umur);
             System.out.println("IPK\t : " + listMhs[pos].ipk);
