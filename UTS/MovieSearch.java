@@ -38,7 +38,6 @@ public class MovieSearch {
             while(j > 0 && movie[j - 1].tahun > temp.tahun){
                 movie[j] = movie[j - 1];
                 j--;
-            
             }
             movie[j] = temp;
         }
