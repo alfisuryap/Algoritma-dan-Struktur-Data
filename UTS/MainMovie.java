@@ -38,7 +38,7 @@ public class MainMovie {
         
 
         System.out.println("\nPENGURUTAN DATA");
-        data.insertionSort(true);
+        data.insertionSort();
         data.tampil();
         // terapkan fungsi pengurutan data
 
