@@ -31,20 +31,14 @@ public class MovieSearch {
         return posisi;
     }
 
-    public void insertionSort(boolean asc){
+    public void insertionSort(){
         for(int i = 1; i < movie.length; i++){
             Movie temp = movie[i];
             int j = i;
-            if(asc){
-                while(j > 0 && movie[j - 1].tahun > temp.tahun){
-                    movie[j] = movie[j - 1];
-                    j--;
-                }
-            }else{
-                while(j > 0 && movie[j - 1].tahun > temp.tahun){
-                    movie[j] = movie[j - 1];
-                    j--;
-                }
+            while(j > 0 && movie[j - 1].tahun > temp.tahun){
+                movie[j] = movie[j - 1];
+                j--;
+            
             }
             movie[j] = temp;
         }
