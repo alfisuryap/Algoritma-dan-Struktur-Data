@@ -8,6 +8,13 @@
             "type": "java",
             "name": "Launch MainMovie",
             "request": "launch",
+            "mainClass": "UTS_Perbaikan.MainMovie",
+            "projectName": "Algoritma-dan-Struktur-Data_b7f24b95"
+        },
+        {
+            "type": "java",
+            "name": "Launch MainMovie",
+            "request": "launch",
             "mainClass": "UTS.MainMovie",
             "projectName": "Algoritma-dan-Struktur-Data_b7f24b95"
         },

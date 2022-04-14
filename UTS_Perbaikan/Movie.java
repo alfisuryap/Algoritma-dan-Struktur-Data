@@ -5,7 +5,6 @@ public class Movie {
     String judul;
     int tahun;
     float rating;
-
     Movie movie[];
     int idx;
 
@@ -16,10 +15,11 @@ public class Movie {
         rating = r;
     }
 
-    // tambahkan algoritma pengurutan dan pencarian yang sesuai
-
-    void tampilan(){
+    Movie(){
         
+    }
+
+    void tampil(){
         System.out.println("ID\t: "+ id);
         System.out.println("Judul\t: "+ judul);
         System.out.println("Tahun\t: "+ tahun);
@@ -35,7 +35,7 @@ public class Movie {
         }
     }
     
-    void tampil(){
+    void tampilAll(){
         for(Movie m : movie){
             m.tampil();
             System.out.println("------------------------------");

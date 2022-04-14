@@ -1,5 +1,6 @@
 package UTS_Perbaikan;
 
+import java.util.List;
 import java.util.Scanner;
 
 public class MainMovie {
@@ -33,12 +34,12 @@ public class MainMovie {
         }
         
         System.out.println("\nDATA SEBELUM DIOLAH");
-        data.tampil();
+        data.tampilAll();
         
 
         System.out.println("\nPENGURUTAN DATA");
         data.insertionSort();
-        data.tampil();
+        data.tampilAll();
         // terapkan fungsi pengurutan data
 
         System.out.println("\nPENCARIAN DATA");
