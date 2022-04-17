@@ -6,6 +6,20 @@
     "configurations": [
         {
             "type": "java",
+            "name": "Launch PostfixMain",
+            "request": "launch",
+            "mainClass": "Jobsheet_7.Source_Code.Percobaan.PostfixMain",
+            "projectName": "Algoritma-dan-Struktur-Data_b7f24b95"
+        },
+        {
+            "type": "java",
+            "name": "Launch StackMain",
+            "request": "launch",
+            "mainClass": "Jobsheet_7.Source_Code.Percobaan.StackMain",
+            "projectName": "Algoritma-dan-Struktur-Data_b7f24b95"
+        },
+        {
+            "type": "java",
             "name": "Launch MainMovie",
             "request": "launch",
             "mainClass": "UTS_Perbaikan.MainMovie",
