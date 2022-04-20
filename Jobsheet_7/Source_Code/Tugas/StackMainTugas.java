@@ -2,9 +2,9 @@ package Jobsheet_7.Source_Code.Tugas;
 
 import java.util.Scanner;
 
-public class StackMain {
+public class StackMainTugas {
     public static void main(String[] args) {
-        Stack stk = new Stack(5);
+        StackTugas stk = new StackTugas(5);
     
         Scanner sc = new Scanner(System.in);
         Scanner sd = new Scanner(System.in);
@@ -16,7 +16,7 @@ public class StackMain {
             System.out.println("------------------------------------");
             System.out.println(" 1. Push\n 2. Pop\n 3. Peek\n 4. Print\n 5. Harga Terendah\n");
             int pilihan;
-            System.out.print("Pilih Menu (masukkan angka 1-4)");
+            System.out.print("Pilih Menu (masukkan angka 1-4): ");
             pilihan = sd.nextInt();
         
             switch (pilihan){
@@ -34,7 +34,7 @@ public class StackMain {
                         double harga = sd.nextInt();
                         System.out.println("");
         
-                        Pakaian p = new Pakaian(jenis, warna, merk, ukuran, harga);
+                        PakaianTugas p = new PakaianTugas(jenis, warna, merk, ukuran, harga);
                         System.out.print("Apakah anda akan menambahkan data baru ke stack (y/n)? ");
                         pilih = sc.next().charAt(0);
                         sc.nextLine();

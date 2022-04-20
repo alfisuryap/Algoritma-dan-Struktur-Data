@@ -6,6 +6,34 @@
     "configurations": [
         {
             "type": "java",
+            "name": "Launch StrukBelanjaMain",
+            "request": "launch",
+            "mainClass": "Jobsheet_7.Source_Code.Tugas.StrukBelanjaMain",
+            "projectName": "Algoritma-dan-Struktur-Data_b7f24b95"
+        },
+        {
+            "type": "java",
+            "name": "Launch StackMainEdit",
+            "request": "launch",
+            "mainClass": "Jobsheet_7.Source_Code.Percobaan.StackMainEdit",
+            "projectName": "Algoritma-dan-Struktur-Data_b7f24b95"
+        },
+        {
+            "type": "java",
+            "name": "Launch StackMainTugas",
+            "request": "launch",
+            "mainClass": "Jobsheet_7.Source_Code.Tugas.StackMainTugas",
+            "projectName": "Algoritma-dan-Struktur-Data_b7f24b95"
+        },
+        {
+            "type": "java",
+            "name": "Launch StackMain",
+            "request": "launch",
+            "mainClass": "Jobsheet_7.Source_Code.Tugas.StackMain",
+            "projectName": "Algoritma-dan-Struktur-Data_b7f24b95"
+        },
+        {
+            "type": "java",
             "name": "Launch PostfixMain",
             "request": "launch",
             "mainClass": "Jobsheet_7.Source_Code.Percobaan.PostfixMain",

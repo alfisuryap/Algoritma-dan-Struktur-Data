@@ -1,13 +1,15 @@
 package Jobsheet_7.Source_Code.Tugas;
 
-public class Stack {
+import Jobsheet_7.Source_Code.Percobaan.Pakaian;
+
+public class StackTugas {
     int size;
     int top;
-    Pakaian data[];
+    PakaianTugas data[];
 
-    public Stack(int size){
+    public StackTugas(int size){
         this.size = size;
-        data = new Pakaian[size];
+        data = new PakaianTugas[size];
         top = -1;
     }
 
@@ -27,7 +29,7 @@ public class Stack {
         }
     }
 
-    public void push(Pakaian pkn){
+    public void push(PakaianTugas pkn){
         if (!IsFull()){
             top++;
             data[top] = pkn;
@@ -38,7 +40,7 @@ public class Stack {
 
     public void pop(){
         if (!IsEmpty()){
-            Pakaian x = data[top];
+            PakaianTugas x = data[top];
             top--;
             System.out.println("Data yang keluar: " + x.jenis + " " + x.warna + " " + x.merk + " " + x.ukuran + " " + x.harga);
         }else{
