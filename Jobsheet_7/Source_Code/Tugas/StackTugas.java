@@ -1,7 +1,5 @@
 package Jobsheet_7.Source_Code.Tugas;
 
-import Jobsheet_7.Source_Code.Percobaan.Pakaian;
-
 public class StackTugas {
     int size;
     int top;

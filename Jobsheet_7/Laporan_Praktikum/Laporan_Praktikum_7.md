@@ -420,8 +420,6 @@ terendah dari semua data pakaian yang tersimpan di dalam stack!
     ~~~java
     package Jobsheet_7.Source_Code.Tugas;
 
-    import Jobsheet_7.Source_Code.Percobaan.Pakaian;
-
     public class StackTugas {
         int size;
         int top;
