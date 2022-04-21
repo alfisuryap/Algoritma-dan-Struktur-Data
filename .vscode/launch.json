@@ -6,6 +6,20 @@
     "configurations": [
         {
             "type": "java",
+            "name": "Launch QueueMain",
+            "request": "launch",
+            "mainClass": "Jobsheet_8.Source_Code.Percobaan.Praktikum2.QueueMain",
+            "projectName": "Algoritma-dan-Struktur-Data_b7f24b95"
+        },
+        {
+            "type": "java",
+            "name": "Launch QueueMain",
+            "request": "launch",
+            "mainClass": "Jobsheet_8.Source_Code.Percobaan.QueueMain",
+            "projectName": "Algoritma-dan-Struktur-Data_b7f24b95"
+        },
+        {
+            "type": "java",
             "name": "Launch StrukBelanjaMain",
             "request": "launch",
             "mainClass": "Jobsheet_7.Source_Code.Tugas.StrukBelanjaMain",
