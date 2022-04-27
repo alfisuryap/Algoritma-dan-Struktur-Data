@@ -1,13 +1,13 @@
 package Jobsheet_8.Source_Code.Tugas.Nomor1;
 
-public class Queue {
+public class QueueTugas1 {
     int[] data;
     int front;
     int rear;
     int size;
     int max;
 
-    public Queue(int n){
+    public QueueTugas1(int n){
         max = n;
         data = new int[max];
         size = 0;

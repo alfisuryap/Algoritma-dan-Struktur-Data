@@ -1,10 +1,10 @@
 package Jobsheet_8.Source_Code.Tugas.Nomor2;
 
-public class Queue {
+public class QueueTugas2 {
     int max, size, front, rear;
     Mahasiswa[] antrian;
     
-    public Queue(int n){
+    public QueueTugas2(int n){
         max = n;
         antrian = new Mahasiswa [max];
         size = 0;

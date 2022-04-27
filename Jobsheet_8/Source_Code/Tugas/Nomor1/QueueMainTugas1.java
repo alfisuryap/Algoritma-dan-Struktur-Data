@@ -2,7 +2,7 @@ package Jobsheet_8.Source_Code.Tugas.Nomor1;
 
 import java.util.Scanner;
 
-public class QueueMain {
+public class QueueMainTugas1 {
     public static void menu(){
         System.out.println("Masukkan operasi yang diinginkan");
         System.out.println("1. Enqueue");
@@ -20,7 +20,7 @@ public class QueueMain {
         Scanner sc = new Scanner(System.in);
         System.out.print("Masukkan kapasitas queue: ");
         int n = sc.nextInt();
-        Queue Q = new Queue(n);
+        QueueTugas1 Q = new QueueTugas1(n);
         int pilih;
 
         do {
