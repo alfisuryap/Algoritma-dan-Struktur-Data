@@ -6,6 +6,13 @@
     "configurations": [
         {
             "type": "java",
+            "name": "Launch QueueMainTugas1",
+            "request": "launch",
+            "mainClass": "Jobsheet_8.Source_Code.Tugas.Nomor1.QueueMainTugas1",
+            "projectName": "Algoritma-dan-Struktur-Data_b7f24b95"
+        },
+        {
+            "type": "java",
             "name": "Launch QueueMainTugas2",
             "request": "launch",
             "mainClass": "Jobsheet_8.Source_Code.Tugas.Nomor2.QueueMainTugas2",
