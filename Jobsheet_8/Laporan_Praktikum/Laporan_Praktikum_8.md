@@ -180,12 +180,18 @@ public class QueueMain {
 
 1. Pada konstruktor, mengapa nilai awal atribut front dan rear bernilai -1, sementara atribut size bernilai 0?
 
+    *• atribut front dan rear bernilai -1 dimaksutkan untuk menunjukkan bahwa sizenya masih dalam konsisi kosong/0*
+    
+    *• atribut size bernilai 0, Karena setiap array di mulai dari indexs ke-0*
+
 2. Pada method Enqueue, jelaskan maksud dan kegunaan dari potongan kode berikut!
 
     ~~~java
     if (rear == max - 1){
         rear = 0;
     ~~~
+
+    *Potongan kode tersebut berguna untuk jika rear/data berada pada posisi max-1/indexs terakhir dari array, maka disaat ada penambahan data baru, maka akan di tempatkan pada index ke-0.*
 
 3. Pada method Dequeue, jelaskan maksud dan kegunaan dari potongan kode berikut!
 
@@ -194,7 +200,11 @@ public class QueueMain {
         front = 0;
     ~~~
 
+    *Potongan kode tersebut berguna untuk jika front berada pada posisi max-1 atau indexs terakhir dari array, maka disaat ada penambahan data baru, maka akan di tempatkan pada index ke-0.*
+
 4. Pada method print, mengapa pada proses perulangan variabel i tidak dimulai dari 0 (int i=0), melainkan int i=front?
+
+    *Karena posisi front atau data terdepan tidak selalu pada indeks ke-0, sedangkan perulangan dimulai dengan posisi frontnya.*
 
 5. Perhatikan kembali method print jelaskan maksud dari potongan kode berikut!
 
@@ -202,7 +212,22 @@ public class QueueMain {
     i = (i + 1) % max;
     ~~~
 
+    *Maksud dari kode tersebut adalah, nilai  (front) jika tidak berposisi sebagai rear, maka akan dilakukan penambahan pada variable tersebut lalu akan dimodulus dengan nilai max atau kapasitas dari Queue tersebut. Gunanya untuk mencegah melakukan print melebihi max, sehingga di lakukan modulo max.*
+
 6. Tunjukkan potongan kode program yang merupakan queue overflow!
+
+    ~~~java
+    public void Enqueue(int dt){
+        if (IsFull()){
+            System.out.println("Queue sudah penuh");
+    ~~~
+
+    ~~~java
+    public int Dequeue(){
+        int dt = 0;
+        if (IsEmpty()){
+            System.out.println("Queue masih kosong");
+    ~~~
 
 7. Pada saat terjadi queue overflow dan queue underflow, program tersebut tetap dapat berjalan dan hanya menampilkan teks informasi. Lakukan modifikasi program sehingga pada saat terjadi queue overflow dan queue underflow, program dihentikan!
 
@@ -415,6 +440,14 @@ public class QueueMain {
                             break;
                         }
     ~~~
+
+    *Equals adalah membandingkan dua string jika kedua string sama maka akan mereturn true dan sebaliknya.*
+
+    *!"".equals(data.norek) ... digunakan untuk mengecek apakah norek pada data tidak sama dengan string kosong ("") dan seterusnya*
+
+    *Jika semua kondisi bernilai true maka akan menampilkan pada konsol isi dari data tersebut lalu berhenti (break)*
+
+    *Break berfungsi untuk mengakhiri kode program akgar tidak terus melakukan proses*
 
 2. Lakukan modifikasi program dengan menambahkan method baru bernama peekRear pada class Queue yang digunakan untuk  engecek antrian yang berada di posisi belakang! Tambahkan pula daftar menu 5. Cek Antrian paling belakang pada class QueueMain sehingga method peekRear dapat dipanggil!
 
