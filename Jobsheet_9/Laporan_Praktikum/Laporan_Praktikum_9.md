@@ -131,6 +131,27 @@ public class SLLMain {
 
 ### *9.2.3 Petanyaan*
 
+1. Mengapa hasil compile kode program di baris pertama menghasilkan “Linked List Kosong”?
+
+    *Karena Linked List (Node) masih belum memiliki isi (data), dimana pada SLLMain langsung dilakukan pemanggilan method print diawal pemanggilan yang mana Node masih belum diisi data sama sekali, sehingga sistem akan menampilkan "Linked List Kosong".*
+
+2. Pada step 10, jelaskan kegunaan kode berikut
+
+    ~~~java
+    ndInput.next = temp.next;
+    temp.next = ndInput;
+    ~~~
+
+    *Kegunaan potongan kode diatas adalah jika temp.data sama dengan key, maka kode program otomatis mengubah nilai variabel ndInput.next menjadi variabel temp.next serta nantinya pada variable ndInput untuk menyimpan nilainya.*
+
+3. Perhatikan class SingleLinkedList, pada method insertAt Jelaskan kegunaan kode berikut 
+
+    ~~~java
+    if (temp.next.next == null) tail = temp.next;
+    ~~~
+
+    *Kegunaan potongan kode diatas adalah jika temp.next.next == nul maka akan mengembalikan nilai -1 atau data kosong, dan jika tidak ada kondisi yang terpenuhi sama sekali maka akan mengembalikan nilai dari index yaitu 0.*
+
 ### **9.3 Modifikasi Elemen pada Single Linked List**
 
 ### *9.3.1 Langkah-langkah Percobaan*
@@ -350,4 +371,40 @@ public class SLLMain {
 
 ### *9.3.3 Petanyaan*
 
+1. Mengapa digunakan keyword break pada fungsi remove? Jelaskan!
+
+    *Karena keyword break tersebut berfungsi untuk menghentikan perulangan (loop). Terdapat dua break yang ada pada method remove, break yang pertama berfungsi jika data yang dihapus ada pada head dan ditemukan maka program akan langsung break, sedangkan break yang kedua berfungsi jika data yang dihapus berada ditengah dan ditemukan maka program akan langsung break.*
+
+2. Jelaskan kegunaan kode dibawah pada method remove
+
+    ~~~java
+    else if (temp.next.data == key){
+        temp.next = temp.next.next;
+    ~~~
+
+    *Potongan kode diatas berfungsi jika node yang dipilih memiliki data yang sama dengan (equals) key, maka terjadi perubahan posisi dimana node tersebut akan digantikan oleh node yang selanjutnya.*
+
+3. Apa saja nilai kembalian yang dapat dikembalikan pada method indexOf? Jelaskan maksud masing-masing kembalian tersebut!
+
+    *Di dalam method indexOf terdapat 2 return, yaitu :*
+
+    *• jika tmp == null maka akan mengembalikan nilai -1 atau data kosong*
+
+    *• jika tidak ada kondisi yang terpenuhi sama sekali maka akan mengembalikan nilai index yaitu 0*
+
 ### **9.3 Tugas**
+
+1. Buat method insertBefore untuk menambahkan node sebelum keyword yang diinginkan
+
+2. Implementasikan ilustrasi Linked List Berikut. Gunakan 4 macam penambahan data yang telah
+dipelajari sebelumnya untuk menginputkan data.
+
+    <img src = "Screenshot (599).png">
+
+3. Buatlah Implementasi Stack berikut menggunakan Single Linked List
+
+    <img src = "Screenshot (600).png">
+
+4. Buatlah implementasi program antrian untuk mengilustasikan mahasiswa yang sedang meminta
+tanda tangan KRS pada dosen DPA di kampus pada tugas jobsheet 8 menggunakan LinkedList.
+Implementasikan Queue pada antrian mahasiswa dengan menggunakan konsep LinkedList!
