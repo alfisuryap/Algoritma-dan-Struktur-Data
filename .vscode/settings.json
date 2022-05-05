@@ -1,3 +1,7 @@
 {
-    "java.help.shareDiagnostics": true
+    "java.help.shareDiagnostics": true,
+    "java.project.sourcePaths": [
+        "Jobsheet_9/Source_Code/Percobaan/Percobaan 1",
+        "Jobsheet_9/Source_Code/Percobaan/Percobaan1"
+    ]
 }
