@@ -6,6 +6,20 @@
     "configurations": [
         {
             "type": "java",
+            "name": "Launch SLLMain",
+            "request": "launch",
+            "mainClass": "Jobsheet_9.Source_Code.Percobaan.SLLMain",
+            "projectName": ""
+        },
+        {
+            "type": "java",
+            "name": "Launch SLLMain",
+            "request": "launch",
+            "mainClass": "SLLMain",
+            "projectName": "Algoritma-dan-Struktur-Data_b7f24b95"
+        },
+        {
+            "type": "java",
             "name": "Launch QueueMainTugas1",
             "request": "launch",
             "mainClass": "Jobsheet_8.Source_Code.Tugas.Nomor1.QueueMainTugas1",
