@@ -6,6 +6,13 @@
     "configurations": [
         {
             "type": "java",
+            "name": "Launch DoubleLinkedListsMain",
+            "request": "launch",
+            "mainClass": "DoubleLinkedListsMain",
+            "projectName": "Algoritma-dan-Struktur-Data_b7f24b95"
+        },
+        {
+            "type": "java",
             "name": "Launch SLLMain",
             "request": "launch",
             "mainClass": "Jobsheet_9.Source_Code.Percobaan.SLLMain",

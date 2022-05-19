@@ -1,7 +1,8 @@
 {
     "java.help.shareDiagnostics": true,
     "java.project.sourcePaths": [
+        "Jobsheet_9/Source_Code/Percobaan/Praktikum2",
         "Jobsheet_9/Source_Code/Percobaan/Praktikum1",
-        "Jobsheet_9/Source_Code/Percobaan/Praktikum2"
+        "Jobsheet_10/Source_Code/Percobaan/Praktikum1"
     ]
 }
