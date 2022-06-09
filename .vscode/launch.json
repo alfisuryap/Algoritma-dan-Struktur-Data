@@ -6,6 +6,20 @@
     "configurations": [
         {
             "type": "java",
+            "name": "Launch BinaryTreeArrayMain",
+            "request": "launch",
+            "mainClass": "BinaryTreeArrayMain",
+            "projectName": "Algoritma-dan-Struktur-Data_b7f24b95"
+        },
+        {
+            "type": "java",
+            "name": "Launch BinaryTreeMain",
+            "request": "launch",
+            "mainClass": "BinaryTreeMain",
+            "projectName": "Algoritma-dan-Struktur-Data_b7f24b95"
+        },
+        {
+            "type": "java",
             "name": "Launch DoubleLinkedListsMain",
             "request": "launch",
             "mainClass": "DoubleLinkedListsMain",
