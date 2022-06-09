@@ -6,6 +6,20 @@
     "configurations": [
         {
             "type": "java",
+            "name": "Launch Graph",
+            "request": "launch",
+            "mainClass": "Graph",
+            "projectName": "Algoritma-dan-Struktur-Data_b7f24b95"
+        },
+        {
+            "type": "java",
+            "name": "Launch graphArray",
+            "request": "launch",
+            "mainClass": "graphArray",
+            "projectName": "Algoritma-dan-Struktur-Data_b7f24b95"
+        },
+        {
+            "type": "java",
             "name": "Launch BinaryTreeArrayMain",
             "request": "launch",
             "mainClass": "BinaryTreeArrayMain",
