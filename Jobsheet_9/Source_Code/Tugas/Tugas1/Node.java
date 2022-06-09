@@ -1,8 +1,8 @@
 public class Node {
     int data;
-    node next;
+    Node next;
     
-    public Node(int nilai, node berikutnya){
+    public Node(int nilai, Node berikutnya){
         this.data = nilai;
         this.next = berikutnya;
     }

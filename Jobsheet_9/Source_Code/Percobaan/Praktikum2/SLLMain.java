@@ -10,7 +10,7 @@ public class SLLMain {
         singLL.print();
         singLL.addFirst(700);
         singLL.print();
-        singLL.inserAfter(700, 999);
+        singLL.insertAfter(700, 999);
         singLL.print();
         singLL.insertAt(3, 833);
         singLL.print();

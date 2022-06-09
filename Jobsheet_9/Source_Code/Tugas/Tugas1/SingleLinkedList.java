@@ -1,13 +1,14 @@
 public class SingleLinkedList {
-    node head; //posisi awal linked list
-    node tail; //posisi akhir linked list
+    Node head; //posisi awal linked list
+    Node tail; //posisi akhir linked list
     
     public boolean isEmpty() {
-    return head == null;
+        return head == null;
     }
+
     public void print(){
         if(!isEmpty()){
-            node tmp = head;
+            Node tmp = head;
             System.out.print("Isi Linked List\t\t\t: ");
             while(tmp != null){
                 System.out.print(tmp.data +"\t\t");
@@ -18,8 +19,9 @@ public class SingleLinkedList {
             System.out.println("Linked List Kosong");
         }
     }
+    
     public void addFirst(int input){
-        node ndInput = new node(input, null);
+        Node ndInput = new Node(input, null);
         if(isEmpty()){ //jika linked list kosong
             head = ndInput; //head dan tail sama dengan node input
             tail = ndInput;
@@ -28,8 +30,9 @@ public class SingleLinkedList {
                 head = ndInput;
         }
     }
+    
     public void addLast(int input){
-        node ndInput = new node(input, null);
+        Node ndInput = new Node(input, null);
         if(isEmpty()){
             head = ndInput; //head dan tail sama dengan node input
             tail = ndInput;
@@ -38,9 +41,10 @@ public class SingleLinkedList {
             tail = ndInput;
         }
     }
+    
     public void insertAfter(int key, int input){
-        node ndInput = new node(input, null);
-        node temp = head;
+        Node ndInput = new Node(input, null);
+        Node temp = head;
         do {
             if (temp.data == key) {
                 ndInput.next = temp.next;
@@ -51,29 +55,32 @@ public class SingleLinkedList {
             temp = temp.next;
         }while (temp != null);
     }
+    
     public void insertAt(int index, int input){
         if (index < 0){
             System.out.println("Indeks salah");
         }else if (index == 0){
             addFirst(input);
         }else {
-            node temp = head;
+            Node temp = head;
             for(int i=0; i<index-1; i++){
                 temp = temp.next;
             }
-            temp.next = new node(input, temp.next);
+            temp.next = new Node(input, temp.next);
             if(temp.next.next == null) tail=temp.next;
         }
     }
+    
     public int getData(int index){
-        node tmp = head;
+        Node tmp = head;
         for (int i=0; i<index; i++){
             tmp =  tmp.next;
         }
         return tmp.data;
     }
+    
     public int indexOf(int key){
-        node tmp = head;
+        Node tmp = head;
         int index = 0;
         while (tmp != null && tmp.data != key) {
             tmp = tmp.next;
@@ -85,6 +92,7 @@ public class SingleLinkedList {
             return index;
         }
     }
+    
     public void removeFirst(){
         if(isEmpty()){
             System.out.println("Linked List Masih Kosong");
@@ -94,13 +102,14 @@ public class SingleLinkedList {
             head = head.next;
         }
     }
+    
     public void removeLast() {
         if (isEmpty()){
             System.out.println("Linked List Masih kosong, tidak dapat dihapus!");
         }else if (head == tail){
             head = tail = null;
         }else{
-            node temp = head;
+            Node temp = head;
             while (temp.next != tail){
                 temp = temp.next;
             }
@@ -108,11 +117,12 @@ public class SingleLinkedList {
             tail = temp;
         }
     }
+    
     public void remove(int key){
         if(isEmpty()){
             System.out.println("Linked List Masih kosong, tidak dapat dihapus!");
         }else {
-            node temp = head;
+            Node temp = head;
             while (temp != null){
                 if((temp.data == key) && (temp == head)){
                     this.removeFirst();
@@ -128,11 +138,12 @@ public class SingleLinkedList {
             }
         }
     }
+    
     public void removeAt(int index){
         if(index == 0){
             removeFirst();
         }else{
-            node temp = head;
+            Node temp = head;
             for(int i=0; i < index-1; i++){
                 temp = temp.next;
             }
@@ -142,10 +153,11 @@ public class SingleLinkedList {
             }
         }
     }
+    
     public void insertBefore(int key, int input){
-        node ndInput = new node(input, null);
-        node temp = head;
-        node prev = null;
+        Node ndInput = new Node(input, null);
+        Node temp = head;
+        Node prev = null;
         
         do{
             if(head.data == key){
