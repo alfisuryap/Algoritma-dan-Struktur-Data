@@ -129,6 +129,8 @@ public class SLLMain {
 
 ### *9.2.2 Verifikasi Hasil Percobaan*
 
+<img src = "pra1.png">
+
 ### *9.2.3 Petanyaan*
 
 1. Mengapa hasil compile kode program di baris pertama menghasilkan “Linked List Kosong”?
@@ -368,6 +370,8 @@ public class SLLMain {
 ~~~
 
 ### *9.3.2 Verifikasi Hasil Percobaan*
+
+<img src = "pra2.png">
 
 ### *9.3.3 Petanyaan*
 
