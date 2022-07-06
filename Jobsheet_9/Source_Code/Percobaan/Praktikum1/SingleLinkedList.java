@@ -1,52 +1,62 @@
+class Node {
+    int data;
+    Node next;
+
+    public Node(int nilai, Node berikutnya) {
+        this.data = nilai;
+        this.next = berikutnya;
+    }
+}
+
 public class SingleLinkedList {
     Node head;
     Node tail;
 
-    public boolean isEmpty(){
+    public boolean isEmpty() {
         return head == null;
     }
 
-    public void print(){
-        if (!isEmpty()){
+    public void print() {
+        if (!isEmpty()) {
             Node tmp = head;
             System.out.print("Isi Linked List:\t");
-            while (tmp != null){
+            while (tmp != null) {
                 System.out.print(tmp.data + "\t");
                 tmp = tmp.next;
             }
             System.out.println("");
-        }else{
+        } else {
             System.out.println("Linked list kosong");
         }
     }
 
-    public void addFirst(int input){
+    public void addFirst(int input) {
         Node ndInput = new Node(input, null);
-        if (isEmpty()){
+        if (isEmpty()) {
             head = ndInput;
             tail = ndInput;
-        }else{
+        } else {
             ndInput.next = head;
             head = ndInput;
         }
     }
 
-    public void addLast(int input){
+    public void addLast(int input) {
         Node ndInput = new Node(input, null);
-        if (isEmpty()){
+        if (isEmpty()) {
             head = ndInput;
             tail = ndInput;
-        }else{
+        } else {
             tail.next = ndInput;
             tail = ndInput;
         }
     }
 
-    public void inserAfter(int key, int input){
+    public void insertAfter(int key, int input) {
         Node ndInput = new Node(input, null);
         Node temp = head;
-        do{
-            if (temp.data == key){
+        do {
+            if (temp.data == key) {
                 ndInput.next = temp.next;
                 temp.next = ndInput;
                 if(ndInput.next == null) tail = ndInput;
@@ -56,18 +66,18 @@ public class SingleLinkedList {
         } while (temp != null);
     }
 
-    public void insertAt(int index, int input){
-        if (index < 0){
+    public void insertAt(int index, int input) {
+        if (index < 0) {
             System.out.println("indeks salah");
-        }else if (index == 0){
+        } else if (index == 0){
             addFirst(input);
-        }else{
+        } else {
             Node temp = head;
-            for (int i = 0; i < index - 1; i++){
+            for (int i = 0; i < index - 1; i++) {
                 temp = temp.next;
             }
             temp.next = new Node(input, temp.next);
-            if (temp.next == null) tail = temp.next;
+            if(temp.next.next == null) tail = temp.next;
         }
     }
 }

@@ -1,5 +1,7 @@
+package Praktikum1;
+
 public class BinaryTreeMain {
-    public static void main(String[] args){
+    public static void main(String[] args) {
         BinaryTree bt = new BinaryTree();
 
         bt.add(6);
@@ -14,13 +16,14 @@ public class BinaryTreeMain {
 
         bt.traversePreOrder(bt.root);
         System.out.println("");
-        bt.traversePostOrder(bt.root);
-        System.out.println("");
         bt.traverseInOrder(bt.root);
         System.out.println("");
-        System.out.println("Find" + bt.find(5));
+        bt.traversePostOrder(bt.root);
+        System.out.println("");
+        System.out.println("Find " + bt.find(5));
         bt.delete(8);
         bt.traversePreOrder(bt.root);
         System.out.println("");
     }
+
 }

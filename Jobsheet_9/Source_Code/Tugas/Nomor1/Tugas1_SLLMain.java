@@ -1,8 +1,8 @@
 import javax.swing.SingleSelectionModel;
 
-public class SLLMain {
+public class Tugas1_SLLMain {
     public static void main(String[] args) {
-        SingleLinkedList singLL = new SingleLinkedList();
+        Tugas1_SLL singLL = new Tugas1_SLL();
         singLL.print();
         singLL.addFirst(890);
         singLL.print();
@@ -13,6 +13,10 @@ public class SLLMain {
         singLL.insertAfter(700, 999);
         singLL.print();
         singLL.insertAt(3, 833);
+        singLL.print();
+
+        System.out.println("Dibawah ini hasil output penambahan method insertBefore()");
+        singLL.insertBefore(760, 450);
         singLL.print();
 
         System.out.println("Data pada indeks ke-1" + singLL.getData(1));

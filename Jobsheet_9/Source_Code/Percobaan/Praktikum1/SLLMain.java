@@ -1,7 +1,7 @@
-import java.util.Scanner;
+import javax.swing.SingleSelectionModel;
 
 public class SLLMain {
-    public static void main(String[] args){
+    public static void main(String[] args) {
         SingleLinkedList singLL = new SingleLinkedList();
         singLL.print();
         singLL.addFirst(890);
@@ -14,5 +14,5 @@ public class SLLMain {
         singLL.print();
         singLL.insertAt(3, 833);
         singLL.print();
-    }   
+    }
 }

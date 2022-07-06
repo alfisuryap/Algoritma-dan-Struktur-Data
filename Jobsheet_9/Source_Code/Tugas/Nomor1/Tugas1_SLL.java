@@ -8,7 +8,7 @@ class Node {
     }
 }
 
-public class SingleLinkedList {
+public class Tugas1_SLL {
     Node head;
     Node tail;
 
@@ -163,5 +163,27 @@ public class SingleLinkedList {
                 tail = temp;
             }
         }
+    }
+
+    public void insertBefore(int key, int input){
+        Node ndInput = new Node(input, null);
+        Node temp = head;
+        Node prev = null;
+    
+        do {
+            if (head.data == key) {
+                addFirst(input);
+                break;
+            } else if (temp.data == key) {
+                ndInput.next = temp;
+                prev.next = ndInput;
+                if(temp.next == null){
+                    tail = ndInput;
+                    break;
+                }
+            }
+            prev = temp;
+            temp = temp.next;
+        } while (temp != null);
     }
 }

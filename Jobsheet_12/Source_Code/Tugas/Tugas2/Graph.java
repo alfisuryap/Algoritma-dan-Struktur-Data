@@ -69,4 +69,9 @@ public class Graph {
         }
         System.out.println(" ");
     }
+
+    public boolean graphType(int source, int destination) throws Exception{
+        list[source].addFirst(destination);
+        return true;
+    }
 }
